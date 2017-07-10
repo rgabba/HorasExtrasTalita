@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage[affil-it]{authblk}
+\usepackage[latin9]{inputenc}
+\usepackage{ucs}
+\usepackage[portuguese]{babel}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref} 
+\usepackage{xcolor}
+\usepackage{subfig}
+
+\graphicspath{{imagens/}}
+
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+%
+\titlelabel{\thetitle.\quad}
+
+%Chega o titulo pra cima
+\setlength{\droptitle}{-6em}   % This is your set screw
+
+\newgeometry{left=2cm, right=2cm, bottom = 2.5cm, top = 2cm}
+
+%muda fonte%
+\renewcommand*\rmdefault{ptm}
+
+\title{Relatório de Horas Extras}
+\author{Raul Henrique Santana}
+\affil{ralhsantana@gmail.com}
+\date{}
+
+\begin{document}
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+# set global chunk options
+opts_chunk$set(fig.path='', fig.align='center', fig.show='hold',warning=FALSE)
+options(formatR.arrow=TRUE,width=90)
+@
+\maketitle
+
+
+Este relatório visa quantizar o valor devido pela empresa para a funcionária
+Talita Leal santos referente às horas extras cumpridas no período de dezembro até a data presente, 10 de julho de 2017.
+
+Para o cálculo foi considerado que um mês possui $4.345$ semanas,
+sendo este um valor médio no período de um ano. Como o período em questão é
+inferior a um ano, deve ser notado que essa consideração esta em desfavor da funcionária.
+
+tendo como base o salário de R\$ $1000,00$ (um mil reais) recebido mensalmente
+pela funcionária o valor de cada hora trabalhada é definido dividindo este valor
+pelo número de semanas no mês e em seguida pelo número de horas por semana que
+deve ser cumprida pela mesma. Tendo o seguinte:
+
+<<prep,eval=T,echo=TRUE>>=
+rm(list=ls())
+horsem <- 1000/4.345
+valorhora <- horsem/40
+@
+
+Resultando em um valor por hora de \Sexpr{round(valorhora,digits = 2)} reais, ou seja R\$ $5,75$.
+
+Será calculado o número de horas extras da fucionária utilizando o código que pode ser acessado em: \href{https://github.com/rgabba/HorasExtrasTalita/blob/master/hor.R}{GitHub}
+
+
+Com o qual obtivemos um valor de 165.5 horas extras, ou seja 165 horas e 30 minutos, para uma jornada de 40 horas semanais.
+
+<<eval=T, echo=F>>=
+dindin<-165.5*valorhora
+din150<-1.5*dindin
+@
+
+Com estes valores conclui-se que a empresa possui uma dívida de \Sexpr{round(dindin, digits=2)}, considerando o valor integral das horas. Entretanto,  segundo o Art. 7º do \textbf{Inciso XVI do Artigo 7 da Constituição Federal de 1988}: \\
+
+\emph{"São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social:}
+
+\emph{XVI - remuneração do serviço extraordinário superior, no mínimo, em cinqüenta por cento à do normal; (Vide Del 5.452, art. 59 § 1º ) } \\
+
+
+Dessa forma, o valor total do débito da empresa com a funcionária é de \Sexpr{round(din150, digits =2)} reais, ou seja, $R\$ 1428,37 $.
+
+
+\end{document}
