@@ -69,7 +69,7 @@ valorhora <- horsem/44
 
 Resultando em um valor por hora de \Sexpr{round(valorhora,digits = 2)} reais, ou seja R\$ $5,23$.
 
-Será calculado o número de horas extras da fucionária utilizando o código que pode ser acessado em: \href{https://github.com/rgabba/HorasExtrasTalita/blob/master/hor.R}{GitHub}
+Será calculado o número de horas extras da fucionária utilizando o código que pode ser acessado em: \href{https://github.com/rgabba/HorasExtrasTalita/blob/master/hor.R}{https://goo.gl/kjTok8}
 
 
 Com o qual obtivemos um valor de 45.5 horas extras, ou seja 45 horas e 30 minutos, para uma carga horária de 44 horas semanais.
