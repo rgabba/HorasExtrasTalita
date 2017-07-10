@@ -4,3 +4,5 @@ relHorT-concordance.tex
 *.pdf
 relHorT.synctex.gz
 relHorT.tex
+*.tex
+*.gz
