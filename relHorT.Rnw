@@ -50,7 +50,7 @@ options(formatR.arrow=TRUE,width=90)
 
 
 Este relatório visa quantizar o valor devido pela empresa para a funcionária
-Talita Leal santos referente às horas extras cumpridas no período de dezembro até a data presente, 10 de julho de 2017.
+Talita Leal Santos referente às horas extras cumpridas no período de dezembro até a data presente, 10 de julho de 2017.
 
 Para o cálculo foi considerado que um mês possui $4.345$ semanas,
 sendo este um valor médio no período de um ano. Como o período em questão é
@@ -72,7 +72,7 @@ Resultando em um valor por hora de \Sexpr{round(valorhora,digits = 2)} reais, ou
 Será calculado o número de horas extras da fucionária utilizando o código que pode ser acessado em: \href{https://github.com/rgabba/HorasExtrasTalita/blob/master/hor.R}{GitHub}
 
 
-Com o qual obtivemos um valor de 45.5 horas extras, ou seja 45 horas e 30 minutos.
+Com o qual obtivemos um valor de 45.5 horas extras, ou seja 45 horas e 30 minutos, para uma carga horária de 44 horas semanais.
 
 <<eval=T, echo=F>>=
 dindin<-45.5*valorhora
